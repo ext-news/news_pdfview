@@ -1,0 +1,26 @@
+{
+  "name": "georgringer/news-pdfview",
+  "description": "Pdf of a news item",
+  "type": "typo3-cms-extension",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Georg Ringer",
+      "role": "Developer",
+      "homepage": "http://ringer.it/"
+    }
+  ],
+  "replace": {
+    "news_pdfview": "self.version",
+    "typo3-ter/news-pdfview": "self.version"
+  },
+  "require": {
+    "typo3/cms-core": "7.6.0 - 8.99.99",
+    "georgringer/news": "3.2.0 - 7.99.99"
+  },
+  "autoload": {
+    "psr-4": {
+      "GeorgRinger\\NewsPdfview\\": "Classes/"
+    }
+  }
+}

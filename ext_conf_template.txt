@@ -1,0 +1,4 @@
+###########################
+# cat=general/enable/103; type=string; label=Path to wkhtmltopdf
+wkhtmltopdf =
+

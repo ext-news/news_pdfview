@@ -1,0 +1,10 @@
+<div class="alert alert-danger">
+    <strong>Sorry an error occurred!</strong><br>
+    <f:switch expression="{errorCode}">
+        <f:case value="1484249265">No news in URL</f:case>
+        <f:case value="1484249266">No news found, maybe deleted</f:case>
+        <f:case value="1473099350">The pdf binary currently not found</f:case>
+        <f:case value="1473099547">PDF could not be created</f:case>
+        <f:case default="true">unknown error {errorCode}</f:case>
+    </f:switch>
+</div>
