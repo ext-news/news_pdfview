@@ -17,16 +17,16 @@ class PdfService
         $this->configuration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
     }
 
-    public function run($newsId, $html)
+    public function run($identifier, $html)
     {
-        $pdfPath = $this->createPdf($newsId, $html);
+        $pdfPath = $this->createPdf($identifier, $html);
         return $pdfPath;
     }
 
 
-    protected function createPdf($newsId, $html)
+    protected function createPdf($identifier, $html)
     {
-        $tempName = $this->getUniquePath($newsId, $html);
+        $tempName = $this->getUniquePath($identifier, $html);
         $pdfName = str_replace('.html', '.pdf', $tempName);
 
         if (file_exists($pdfName)) {
@@ -65,9 +65,9 @@ class PdfService
     }
 
 
-    protected function getUniquePath($newsId, $html)
+    protected function getUniquePath($identifier, $html)
     {
-        $path = PATH_site . 'uploads/tx_newspdfview/news_' . $newsId . '_' . GeneralUtility::hmac($html, 'news_pdf') . '.html';
+        $path = PATH_site . 'uploads/tx_newspdfview/news_' . $identifier . '_' . GeneralUtility::hmac($html, 'news_pdf') . '.html';
         return $path;
     }
 

@@ -1,0 +1,8 @@
+<div class="alert alert-danger">
+    <strong>Sorry an error occurred!</strong><br>
+    <f:switch expression="{errorCode}">
+        <f:case value="1493571480">no user logged in</f:case>
+        <f:case value="1493571481">The cart is empty</f:case>
+        <f:case default="true">unknown error {errorCode}</f:case>
+    </f:switch>
+</div>
